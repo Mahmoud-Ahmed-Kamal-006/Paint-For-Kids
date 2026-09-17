@@ -1,1 +1,2 @@
-# PT_PH2
+# Paint For Kids 
+## CMPS102
