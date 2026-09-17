@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>PT Project</ProjectName>
+    <ProjectGuid>{1AC3DDD7-FDDE-487E-A2A4-52A8FCF7BDB9}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <TypeLibraryName>.\Release/graphics_prj.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\Release/graphics_prj.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Release/graphics_prj.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/graphics_prj.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/graphics_prj.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <TypeLibraryName>.\Debug/graphics_prj.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug/$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Debug/$(TargetName).exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Actions\AddCircleAction.cpp" />
+    <ClCompile Include="Actions\AddHexagonAction.cpp" />
+    <ClCompile Include="Actions\AddSquareAction.cpp" />
+    <ClCompile Include="Actions\AddTriangleAction.cpp" />
+    <ClCompile Include="Actions\ChngDrawColor.cpp" />
+    <ClCompile Include="Actions\ClearAllAction.cpp" />
+    <ClCompile Include="Actions\CopyAction.cpp" />
+    <ClCompile Include="Actions\ExitAction.cpp" />
+    <ClCompile Include="Actions\FillColorAction.cpp" />
+    <ClCompile Include="Actions\Load.cpp" />
+    <ClCompile Include="Actions\CutAction.cpp" />
+    <ClCompile Include="Actions\DeleteAction.cpp" />
+    <ClCompile Include="Actions\MatchingPairs.cpp" />
+    <ClCompile Include="Actions\MissingShapes.cpp" />
+    <ClCompile Include="Actions\Save.cpp" />
+    <ClCompile Include="Actions\PasteAction.cpp" />
+    <ClCompile Include="Actions\select.cpp" />
+    <ClCompile Include="Actions\Swap.cpp" />
+    <ClCompile Include="Actions\SwitchToDraw.cpp" />
+    <ClCompile Include="Actions\SwitchToPlay.cpp" />
+    <ClCompile Include="CMUgraphicsLib\auxil.cpp" />
+    <ClCompile Include="CMUgraphicsLib\CMUgraphics.cpp" />
+    <ClCompile Include="CMUgraphicsLib\colors.cpp" />
+    <ClCompile Include="CMUgraphicsLib\image.cpp" />
+    <ClCompile Include="CMUgraphicsLib\jpegload.c" />
+    <ClCompile Include="CMUgraphicsLib\keyqueue.cpp" />
+    <ClCompile Include="CMUgraphicsLib\mousequeue.cpp" />
+    <ClCompile Include="CMUgraphicsLib\windowinput.cpp" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jcomapi.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jcparam.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdapimin.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdapistd.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdatasrc.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdcoefct.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdcolor.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jddctmgr.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdhuff.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdinput.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdmainct.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdmarker.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdmaster.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdmerge.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdphuff.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdpostct.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdsample.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jdtrans.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jerror.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jidctflt.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jidctfst.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jidctint.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jidctred.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jmemmgr.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jmemnobs.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jquant1.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jquant2.c" />
+    <ClCompile Include="CMUgraphicsLib\jpeg\jutils.c" />
+    <ClCompile Include="Figures\CCircle.cpp" />
+    <ClCompile Include="Figures\CFigure.cpp" />
+    <ClCompile Include="Figures\CHexagon.cpp" />
+    <ClCompile Include="Figures\CRectangle.cpp" />
+    <ClCompile Include="Actions\AddRectAction.cpp" />
+    <ClCompile Include="Figures\CSquare.cpp" />
+    <ClCompile Include="Figures\CTriangle.cpp" />
+    <ClCompile Include="GUI\Input.cpp" />
+    <ClCompile Include="GUI\Output.cpp" />
+    <ClCompile Include="ApplicationManager.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Phase2-cloned\Actions\Action.h" />
+    <ClInclude Include="Actions\AddCircleAction.h" />
+    <ClInclude Include="Actions\AddHexagonAction.h" />
+    <ClInclude Include="Actions\AddSquareAction.h" />
+    <ClInclude Include="Actions\AddTriangleAction.h" />
+    <ClInclude Include="Actions\ChngDrawColor.h" />
+    <ClInclude Include="Actions\ClearAllAction.h" />
+    <ClInclude Include="Actions\CopyAction.h" />
+    <ClInclude Include="Actions\CutAction.h" />
+    <ClInclude Include="Actions\DeleteAction.h" />
+    <ClInclude Include="Actions\ExitAction.h" />
+    <ClInclude Include="Actions\FillColorAction.h" />
+    <ClInclude Include="Actions\Load.h" />
+    <ClInclude Include="Actions\MatchingPairs.h" />
+    <ClInclude Include="Actions\MissingShapes.h" />
+    <ClInclude Include="Actions\PasteAction.h" />
+    <ClInclude Include="Actions\Save.h" />
+    <ClInclude Include="Actions\select.h" />
+    <ClInclude Include="Actions\Swap.h" />
+    <ClInclude Include="Actions\SwitchToDraw.h" />
+    <ClInclude Include="Actions\SwitchToPlay.h" />
+    <ClInclude Include="CMUgraphicsLib\auxil.h" />
+    <ClInclude Include="CMUgraphicsLib\CMUgraphics.h" />
+    <ClInclude Include="CMUgraphicsLib\colors.h" />
+    <ClInclude Include="CMUgraphicsLib\error.h" />
+    <ClInclude Include="CMUgraphicsLib\image.h" />
+    <ClInclude Include="CMUgraphicsLib\jpegload.h" />
+    <ClInclude Include="CMUgraphicsLib\keyqueue.h" />
+    <ClInclude Include="CMUgraphicsLib\mousequeue.h" />
+    <ClInclude Include="CMUgraphicsLib\version.h" />
+    <ClInclude Include="CMUgraphicsLib\windowinput.h" />
+    <ClInclude Include="CMUgraphicsLib\jpeg\jconfig.h" />
+    <ClInclude Include="CMUgraphicsLib\jpeg\jdct.h" />
+    <ClInclude Include="CMUgraphicsLib\jpeg\jdhuff.h" />
+    <ClInclude Include="CMUgraphicsLib\jpeg\jerror.h" />
+    <ClInclude Include="CMUgraphicsLib\jpeg\jinclude.h" />
+    <ClInclude Include="CMUgraphicsLib\jpeg\jmemsys.h" />
+    <ClInclude Include="CMUgraphicsLib\jpeg\jmorecfg.h" />
+    <ClInclude Include="CMUgraphicsLib\jpeg\jpegint.h" />
+    <ClInclude Include="CMUgraphicsLib\jpeg\jpeglib.h" />
+    <ClInclude Include="CMUgraphicsLib\jpeg\jversion.h" />
+    <ClInclude Include="Figures\CCircle.h" />
+    <ClInclude Include="Figures\CFigure.h" />
+    <ClInclude Include="Figures\CHexagon.h" />
+    <ClInclude Include="Figures\CRectangle.h" />
+    <ClInclude Include="Actions\Action.h" />
+    <ClInclude Include="Actions\AddRectAction.h" />
+    <ClInclude Include="Figures\CSquare.h" />
+    <ClInclude Include="Figures\CTriangle.h" />
+    <ClInclude Include="GUI\Input.h" />
+    <ClInclude Include="GUI\Output.h" />
+    <ClInclude Include="GUI\UI_Info.h" />
+    <ClInclude Include="ApplicationManager.h" />
+    <ClInclude Include="DEFS.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="Debug\AddCircleAction.sbr" />
+    <None Include="Debug\AddRectAction.sbr" />
+    <None Include="Debug\ApplicationManager.sbr" />
+    <None Include="Debug\auxil.sbr" />
+    <None Include="Debug\CCircle.sbr" />
+    <None Include="Debug\CFigure.sbr" />
+    <None Include="Debug\CMUgraphics.sbr" />
+    <None Include="Debug\colors.sbr" />
+    <None Include="Debug\CRectangle.sbr" />
+    <None Include="Debug\image.sbr" />
+    <None Include="Debug\Input.sbr" />
+    <None Include="Debug\jcomapi.sbr" />
+    <None Include="Debug\jcparam.sbr" />
+    <None Include="Debug\jdapimin.sbr" />
+    <None Include="Debug\jdapistd.sbr" />
+    <None Include="Debug\jdatasrc.sbr" />
+    <None Include="Debug\jdcoefct.sbr" />
+    <None Include="Debug\jdcolor.sbr" />
+    <None Include="Debug\jddctmgr.sbr" />
+    <None Include="Debug\jdhuff.sbr" />
+    <None Include="Debug\jdinput.sbr" />
+    <None Include="Debug\jdmainct.sbr" />
+    <None Include="Debug\jdmarker.sbr" />
+    <None Include="Debug\jdmaster.sbr" />
+    <None Include="Debug\jdmerge.sbr" />
+    <None Include="Debug\jdphuff.sbr" />
+    <None Include="Debug\jdpostct.sbr" />
+    <None Include="Debug\jdsample.sbr" />
+    <None Include="Debug\jdtrans.sbr" />
+    <None Include="Debug\jerror.sbr" />
+    <None Include="Debug\jidctflt.sbr" />
+    <None Include="Debug\jidctfst.sbr" />
+    <None Include="Debug\jidctint.sbr" />
+    <None Include="Debug\jidctred.sbr" />
+    <None Include="Debug\jmemmgr.sbr" />
+    <None Include="Debug\jmemnobs.sbr" />
+    <None Include="Debug\jpegload.sbr" />
+    <None Include="Debug\jquant1.sbr" />
+    <None Include="Debug\jquant2.sbr" />
+    <None Include="Debug\jutils.sbr" />
+    <None Include="Debug\keyqueue.sbr" />
+    <None Include="Debug\main.sbr" />
+    <None Include="Debug\mousequeue.sbr" />
+    <None Include="Debug\Output.sbr" />
+    <None Include="Debug\PT Project.bsc" />
+    <None Include="Debug\PT Project.exe.recipe" />
+    <None Include="Debug\PT Project.pdb" />
+    <None Include="Debug\PT Project.tlog\bscmake.command.1.tlog" />
+    <None Include="Debug\PT Project.tlog\bscmake.read.1.tlog" />
+    <None Include="Debug\PT Project.tlog\bscmake.write.1.tlog" />
+    <None Include="Debug\PT Project.tlog\CL.command.1.tlog" />
+    <None Include="Debug\PT Project.tlog\Cl.items.tlog" />
+    <None Include="Debug\PT Project.tlog\CL.read.1.tlog" />
+    <None Include="Debug\PT Project.tlog\CL.write.1.tlog" />
+    <None Include="Debug\PT Project.tlog\link.39508.read.1.tlog" />
+    <None Include="Debug\PT Project.tlog\link.39508.read.2.tlog" />
+    <None Include="Debug\PT Project.tlog\unsuccessfulbuild" />
+    <None Include="Debug\vc143.idb" />
+    <None Include="Debug\vc143.pdb" />
+    <None Include="Debug\windowinput.sbr" />
+    <None Include="PT-Project.vcproj" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CMUgraphicsLib\Manual.txt" />
+    <Text Include="CMUgraphicsLib\Readme.txt" />
+    <Text Include="Debug\PT-Project.log" />
+    <Text Include="Debug\PT-Project.vcxproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="Debug\AddCircleAction.obj" />
+    <Object Include="Debug\AddRectAction.obj" />
+    <Object Include="Debug\ApplicationManager.obj" />
+    <Object Include="Debug\auxil.obj" />
+    <Object Include="Debug\CCircle.obj" />
+    <Object Include="Debug\CFigure.obj" />
+    <Object Include="Debug\CMUgraphics.obj" />
+    <Object Include="Debug\colors.obj" />
+    <Object Include="Debug\CRectangle.obj" />
+    <Object Include="Debug\image.obj" />
+    <Object Include="Debug\Input.obj" />
+    <Object Include="Debug\jcomapi.obj" />
+    <Object Include="Debug\jcparam.obj" />
+    <Object Include="Debug\jdapimin.obj" />
+    <Object Include="Debug\jdapistd.obj" />
+    <Object Include="Debug\jdatasrc.obj" />
+    <Object Include="Debug\jdcoefct.obj" />
+    <Object Include="Debug\jdcolor.obj" />
+    <Object Include="Debug\jddctmgr.obj" />
+    <Object Include="Debug\jdhuff.obj" />
+    <Object Include="Debug\jdinput.obj" />
+    <Object Include="Debug\jdmainct.obj" />
+    <Object Include="Debug\jdmarker.obj" />
+    <Object Include="Debug\jdmaster.obj" />
+    <Object Include="Debug\jdmerge.obj" />
+    <Object Include="Debug\jdphuff.obj" />
+    <Object Include="Debug\jdpostct.obj" />
+    <Object Include="Debug\jdsample.obj" />
+    <Object Include="Debug\jdtrans.obj" />
+    <Object Include="Debug\jerror.obj" />
+    <Object Include="Debug\jidctflt.obj" />
+    <Object Include="Debug\jidctfst.obj" />
+    <Object Include="Debug\jidctint.obj" />
+    <Object Include="Debug\jidctred.obj" />
+    <Object Include="Debug\jmemmgr.obj" />
+    <Object Include="Debug\jmemnobs.obj" />
+    <Object Include="Debug\jpegload.obj" />
+    <Object Include="Debug\jquant1.obj" />
+    <Object Include="Debug\jquant2.obj" />
+    <Object Include="Debug\jutils.obj" />
+    <Object Include="Debug\keyqueue.obj" />
+    <Object Include="Debug\main.obj" />
+    <Object Include="Debug\mousequeue.obj" />
+    <Object Include="Debug\Output.obj" />
+    <Object Include="Debug\windowinput.obj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\MenuItems\Menu_change_color.jpg" />
+    <Image Include="images\MenuItems\Menu_Circ.jpg" />
+    <Image Include="images\MenuItems\Menu_ClearAll.jpg" />
+    <Image Include="images\MenuItems\Menu_Copy.jpg" />
+    <Image Include="images\MenuItems\Menu_Cut.jpg" />
+    <Image Include="images\MenuItems\Menu_Delete.jpg" />
+    <Image Include="images\MenuItems\Menu_Draw.jpg" />
+    <Image Include="images\MenuItems\Menu_Exit.jpg" />
+    <Image Include="images\MenuItems\Menu_FillColor.jpg" />
+    <Image Include="images\MenuItems\Menu_Hexagon.jpg" />
+    <Image Include="images\MenuItems\Menu_Load.jpg" />
+    <Image Include="images\MenuItems\Menu_Matching_Shape.jpg" />
+    <Image Include="images\MenuItems\Menu_Missing_Shape.jpg" />
+    <Image Include="images\MenuItems\Menu_Paste.jpg" />
+    <Image Include="images\MenuItems\Menu_Play.jpg" />
+    <Image Include="images\MenuItems\Menu_Rect.JPG" />
+    <Image Include="images\MenuItems\Menu_Rotate.jpg" />
+    <Image Include="images\MenuItems\Menu_Save.jpg" />
+    <Image Include="images\MenuItems\Menu_Select.jpg" />
+    <Image Include="images\MenuItems\Menu_Square.jpg" />
+    <Image Include="images\MenuItems\Menu_Swap.jpg" />
+    <Image Include="images\MenuItems\Menu_Triangle.jpg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

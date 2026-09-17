@@ -1,0 +1,12 @@
+# Ignore Visual Studio temporary files, build results, and more
+.vs/
+bin/
+obj/
+Debug/
+Release/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.*
+*.db
