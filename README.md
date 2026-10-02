@@ -4,7 +4,7 @@ A shape-drawing app with two built-in memory games, written in C++ for Windows w
 
 Draw shapes in **Draw mode**, then switch to **Play mode** to play games using the shapes you drew.
 
-<!-- Add a screenshot or GIF here, e.g. ![Screenshot](docs/screenshot.png) -->
+![Draw mode](docs/screenshot.png)
 
 ## Table of contents
 
@@ -178,6 +178,7 @@ Figures/                CFigure base class and the five shape classes
 GUI/                    Input and Output classes (toolbar, status bar, drawing)
 CMUgraphicsLib/         Third-party graphics library (includes libjpeg)
 images/MenuItems/       Toolbar icons (JPEG)
+docs/                   README screenshot
 ```
 
 ## Known limitations
